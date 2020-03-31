@@ -3,74 +3,24 @@ html
     body
       
         <h1> Znanjdz Swoj Telefon w Wymarzonej Cenie </h1>
+        <br><br><br>
 
-        
-        <form action='/application' method="POST" name="form">
+        <h2>Lecz najpierw sie zarejestruj </h2>
 
-            <!-- Login -->
+        <!-- Login -->
+
+            <form action='/application' method="POST" name="form">
+
             <label for="email">Email:</label>
             <input type="text" id="email" name="email"><br><br>
 
             <label for="password">Haslo:</label>
             <input type="password" id="password" name="password"><br><br><br>
 
-            <!-- Search -->
-            <label for="nameSearch">Nazwa Wyszukiwania:</label>
-            <input type="text" id="nameSearch" name="nameSearch"><br><br>
+            <input type="submit" value="Rejestruj"> 
 
-            <label for="pageQuantity">Ilosc Przeszukwianych Stron:</label>
-            <input type="number" id="pageQuantity" name="pageQuantity"><br><br>
-
-            <label for="link">Link:</label>
-            <input type="text" id="link" name="link"><br><br><br>
-
-            <!--Product -->
-            <label for="nameProduct">Nazwa Telefonu</label>
-            <input type="text" id="nameProduct" name="nameProduct"><br><br>
-
-            <label for="priceMin">Cena minimalna</label>
-            <input type="number" id="priceMin" name="priceMin"><br>
-
-            <label for="priceMax">Cena maskymalna</label>
-            <input type="number" id="priceMax" name="priceMax"><br>
-
-            <label for="priceGood">Cena Atrakcyjna</label>
-            <input type="number" id="priceGood" name="priceGood"><br><br><br>
-
-            <!--Words -->
-            <label for="goodWords">Dobre Slowa:</label>
-            <input type="text" id="goodWords" name="goodWords"><br><br>
-
-            <label for="badWords">Zle Slowa:</label>
-            <input type="text" id="badWords" name="badWords"><br><br>
-
-
-            <input type="submit" value="Szukaj">        
-            
-        </form>
-
-    if(formMessage.length)
-    .lightbox(v-show="showFeedback")
-        .lightbox_content
-        h2.lightbox_header #{ formMessage}
-        .lightbox_actions.lightbox_actions--centered
-        button.btn.btn--primary(@click="closeFeedbackLightbox") Close
-
+            </form>
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         </form>
 
