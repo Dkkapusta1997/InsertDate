@@ -1,12 +1,15 @@
 const express=require('express');
 const router=express.Router();
 
-//Application to the costumer's question render page 'home'
-router.get('/',(req,res)=>{
+const PageController=require('../controllers/PagesController');
+const ApplicationController=require('../controllers/ApplicationsController');
 
-res.render('home')
 
-});
+//EndPoint, Response to client when he viiit '/'
+router.get('/',PageController.home);
+
+//When i send form
+router.post('/application',ApplicationController.store)
 
 //App render kontact.pug (file is in views) when client visit '/kontact'
 router.get('/kontact',(req,res)=>{

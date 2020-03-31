@@ -4,6 +4,7 @@ const bodyParser=require('body-parser');
 const flash=require('connect-flash');
 const cookieParser=require('cookie-parser');
 const routes=require('./routes/index');
+const session=require('express-session');
 
 const app=express();
 
@@ -19,6 +20,14 @@ app.set(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(cookieParser());
+
+//Flash response
+app.use(session({
+secret: 'Znajdziesz',
+resave:false,
+saveUninitialized:true,
+cookie: {}
+}));
 
 app.use(flash());
 
