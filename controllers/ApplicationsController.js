@@ -1,4 +1,13 @@
+
+const Application=require('../models/application');
+
 exports.store=(req,res)=>{
-req.flash('form','Bedziesz jeszcze handlorz XD'+req.body.email);
-res.redirect('/login');
+
+    Application.create({
+        'email': req.body.email,
+        'password':req.body.password
+    }).then(function(){
+        req.flash('form','Bedziesz jeszcze handlorz XD'+req.body.email);
+        res.redirect('/login');
+    })
 };
