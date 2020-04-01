@@ -7,6 +7,6 @@ const Application=bookshelf.Model.extend({
 module.exports.create=(application)=>{
     return new Application({
         email: application.email,
-        password: application.password
+        password_: application.password
     }).save();
 };
