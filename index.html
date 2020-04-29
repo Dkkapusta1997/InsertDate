@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+	<html lang="pl-PL">
+		<head>
+			<link rel="stylesheet" href="style.css">
+			
+			<title> Znajdz Okazje </title>
+			
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+
+			<script src="https://unpkg.com/axios/dist/axios.min.js">
+				
+				const axios = require('axios').default;
+				
+			</script>
+			
+			<script>
+			async function zwrocMiCosZBazy(){
+
+  
+			const response = await axios.post('http://localhost:8080/kontact')		
+			.then(function (response) {
+				// handle success
+				console.log(response);
+				
+				
+			  })
+			  .catch(function (error) {
+				// handle error
+				console.log(error);
+				
+			  })
+			  .then(function () {
+				// always executed
+			  });
+			  
+			
+			}
+			</script>
+			
+			
+		</head>
+		<body>
+		
+			<header> <h1 id="a"> Znajdz okazje : ) <h1></header>
+			
+			<nav>
+				<ul>
+					<li> <a href="" onclick="zwrocMiCosZBazy()"> Dkkapusta1997@yahoo.pl</a> </li>
+				</ul>
+				<ul>
+					<li> <a href=""> Wyszukiwania</a> </li>
+					<li> <a href=""> Produkty</a> </li>
+					<li> <a href=""> Słowa</a> </li>			
+				</ul>
+			</nav>
+			
+			<div id="a">
+			
+			</div>		
+			
+		</body>
+		<footer>
+		<p id="footer"> Wykonał :  <a href=""> Dariusz Kapusta </a> </p>
+		</footer>
+	</html>

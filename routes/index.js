@@ -14,11 +14,10 @@ router.get('/search',PageController.search)
 //When i send form
 router.post('/application',ApplicationController.store)
 
-//App render kontact.pug (file is in views) when client visit '/kontact'
-router.get('/kontact',(req,res)=>{
 
-    res.render('kontact')
-    
+router.post('/kontact',(req,res)=>{
+    console.log("wszedlem w posta");
+    res.send("Jakas odpowiedz z bazy");
 });
 
 router.get('/login',(req,res)=>{
